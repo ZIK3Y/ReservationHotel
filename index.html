@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Hotel</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
+    <script src="./script/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>BOOKING HOTEL</h1>
+        <p>Indiquez vos dates de réservation - Toute annulation doit se faire 48h avant</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="booking-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="lieuSejour">Lieu de séjour</label>
+                            <input type="text" class="form-control" id="lieuSejour" placeholder="Lieu du séjour">
+                        </div>
+                        <div class="form-group">
+                            <label for="arrivee">Arrivée</label>
+                            <input type="date" class="form-control" id="arrivee">
+                        </div>
+                        <div class="form-group">
+                            <label for="depart">Départ</label>
+                            <input type="date" class="form-control" id="depart">
+                        </div>
+                        <div class="form-group">
+                            <label>Adulte</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="adulte" value="0">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button" onclick="increment('adulte')">+</button>
+                                    <button class="btn btn-primary" type="button" onclick="decrement('adulte')">-</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Enfant</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="enfant" value="0">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button" onclick="increment('enfant')">+</button>
+                                    <button class="btn btn-primary" type="button" onclick="decrement('enfant')">-</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Chambre</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="chambre" value="0">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button" onclick="increment('chambre')">+</button>
+                                    <button class="btn btn-primary" type="button" onclick="decrement('chambre')">-</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="work">
+                            <label class="form-check-label" for="work">Je voyage pour le travail</label>
+                        </div>
+                        <div class="form-group" id="enfants">
+                        </div>
+                        <button type="button" class="btn btn-primary">Rechercher</button>
+                        <button type="reset" class="btn btn-secondary">Effacer</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="confirmation">
+                    <h2>Confirmation réservation</h2>
+                    <p>Nombre(s) d'adulte(s) : <span id="confirmAdulte">0</span></p>
+                    <p>Nombre(s) d'enfant(s) : <span id="confirmEnfant">0</span></p>
+                    <p>Nombre(s) de chambre(s) : <span id="confirmChambre">0</span></p>
+                    <p>Voyage pour le travail : <span id="confirmSork">Non</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Indiquez vos dates de réservation - Toute annulation doit se faire avant 48h</p>
+    </div>
+
+</body>
+</html>
